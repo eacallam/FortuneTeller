@@ -31,11 +31,8 @@ namespace FortuneTeller
                 Environment.Exit(0);
             }
 
-            else
-            {
-                //Ask for the user's last name
-                Console.WriteLine("What is your last name?");
-            }
+            //Ask for the user's last name
+            Console.WriteLine("What is your last name?");
 
             string userLastInput = Console.ReadLine();
             string userLast = userLastInput.ToLower();
@@ -49,13 +46,10 @@ namespace FortuneTeller
             {
                 Environment.Exit(0);
             }
-
-            else 
-            {
-                //Ask for the user's age
-                Console.WriteLine("What is your age? Please enter a number.");
-            }
-
+ 
+             //Ask for the user's age
+             Console.WriteLine("What is your age? Please enter a number.");
+            
             string userAgeInput = Console.ReadLine();
             string userAge = userAgeInput.ToLower();
 
@@ -68,13 +62,10 @@ namespace FortuneTeller
             {
                 Environment.Exit(0);
             }
-
-            else 
-            {
+                     
             //Ask for the user's birth month (as an 'int')
             Console.WriteLine("What is your birth month? Please enter a number between 1 and 12.");
-            }
-
+            
             string userBirthMonthInput = Console.ReadLine();
             string userBirthMonth = userBirthMonthInput.ToLower();
 
@@ -88,12 +79,10 @@ namespace FortuneTeller
                 Environment.Exit(0);
             }
 
-            else
-            {
-                //Ask the user for the user's favorite ROYGBIV color
-                //IF the user does not know what ROYGBIV is, ask him/her to enter "Help" to get a list
-                Console.WriteLine("What is your favorite ROYGBIV color? If you do not know what ROYGBIV is, enter \"Help\"");
-            }
+            //Ask the user for the user's favorite ROYGBIV color
+            //IF the user does not know what ROYGBIV is, ask him/her to enter "Help" to get a list
+            Console.WriteLine("What is your favorite ROYGBIV color? If you do not know what ROYGBIV is, enter \"Help\"");
+            
 
             string userColorInput = Console.ReadLine();
             string userColor = userColorInput.ToLower();
@@ -114,11 +103,10 @@ namespace FortuneTeller
                 userColorInput = Console.ReadLine();
                 userColor = userColorInput.ToLower();
             }
-
-            {
+                        
             //Ask for the user's number of siblings
-                Console.WriteLine("How many siblings do you have? Please enter a number.");
-            }
+            Console.WriteLine("How many siblings do you have? Please enter a number.");
+            
 
             string userSiblingInput = Console.ReadLine();
             string userSibling = userSiblingInput.ToLower();
@@ -153,12 +141,13 @@ namespace FortuneTeller
             else
             {
                 retireAge = 20;
-            }                        
+            }  
+                                  
             //If the user's birth month is 1-4, s/he will have $50,000 in the bank
             //If the user's birth month is 5-8, s/he will have $100,000 in the bank
             //If the user's birth month is 9-12, s/he will have $1,000,000 in the bank
             //If the user enters a number other than 1-12, s/he will have $0 in the bank.
-            if (userBirthMonthInt > 1 && userBirthMonthInt < 5)
+            if (userBirthMonthInt >= 1 && userBirthMonthInt < 5)
             {
                 bank = "$50,000";
             }
@@ -218,15 +207,15 @@ namespace FortuneTeller
             {
                 vacationHome = "Rome";
             }
-            if (userSiblingInt == 1)
+            else if (userSiblingInt == 1)
             {
                 vacationHome = "Paris";
             }
-            if (userSiblingInt == 2)
+            else if (userSiblingInt == 2)
             {
                 vacationHome = "Chile";
             }
-            if (userSiblingInt >= 3)
+            else if (userSiblingInt >= 3)
             {
                 vacationHome = "Canada";
             }
